@@ -86,16 +86,39 @@ function buildModeBar(){
   }));
 }
 function playerRow(p,i){
-  const tiers=Object.keys(aliases).map(m=>getTier(p,m)).filter(Boolean);
   const avatar=avatarUrl(p);
+
+  const tierDisplays=Object.keys(aliases).map(mode=>{
+    const tier=getTier(p,mode);
+    const modeInfo=MODES.find(m=>m.id===mode);
+
+    return `
+      <div class="tier-display" title="${modeInfo.label}: ${tier || "Untested"}">
+        <span class="tier-mode-icon">${modeInfo.icon}</span>
+        <span class="tier-label ${tierClass(tier)}">${tier || "—"}</span>
+      </div>
+    `;
+  }).join("");
+
   return `<article class="player-row" data-player="${encodeURIComponent(displayName(p))}">
     <div class="rank">${i+1}.</div>
+
     <div class="player-main">
       ${avatar?`<img class="avatar" src="${avatar}" alt="">`:""}
-      <div><div class="player-name">${escapeHtml(displayName(p))}</div><div class="player-sub">${scorePlayer(p)} points</div></div>
+      <div>
+        <div class="player-name">${escapeHtml(displayName(p))}</div>
+        <div class="player-sub">${scorePlayer(p)} points</div>
+      </div>
     </div>
-    <div class="region ${regionOf(p)==="EU"?"eu":""}">${regionOf(p)||"—"}</div>
-    <div class="score"><b>${scorePlayer(p)}</b><small>points</small></div>
+
+    <div class="tier-pills">
+      ${tierDisplays}
+    </div>
+
+    <div class="score">
+      <b>${scorePlayer(p)}</b>
+      <small>points</small>
+    </div>
   </article>`;
 }
 function renderOverall(){
