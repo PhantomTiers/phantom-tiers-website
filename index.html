@@ -1,9 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Phantom Tiers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phantom Tiers</title>
+<meta name="description" content="Phantom Tiers — competitive Minecraft PvP rankings.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Phantom Tiers</h1>
+
+<div class="site-bg"></div>
+<div class="site-overlay"></div>
+
+<header class="topbar">
+  <a class="brand" href="#" data-home aria-label="Phantom Tiers home">
+    <span class="brand-mark">P</span>
+    <span class="brand-text">PHANTOM<span>TIERS</span></span>
+  </a>
+
+  <nav class="main-nav">
+    <a href="#home" data-home class="active">Home</a>
+    <a href="#leaderboard" data-overall>Leaderboard</a>
+    <a href="#information" data-info>Information</a>
+  </nav>
+
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input id="playerSearch" type="search" placeholder="Search player..." autocomplete="off">
+  </div>
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <div class="hero-title">
+        <span>PHANTOM</span><b>TIERS</b>
+      </div>
+
+      <h1>The Official Minecraft PvP Ranking Platform</h1>
+
+      <p>Elite competitive rankings across nine Minecraft PvP gamemodes.</p>
+
+      <button class="info-btn" data-info>
+        <span>ⓘ</span> Information
+      </button>
+    </div>
+
+    <button class="scroll-cue" data-overall aria-label="View leaderboard">
+      ⌄
+    </button>
+  </section>
+
+  <section class="ranking-app" id="leaderboard">
+
+    <div class="mode-bar" id="modeBar"></div>
+
+    <div class="content-shell">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow" id="viewEyebrow">OVERALL RANKING</span>
+          <h2 id="viewTitle">Overall</h2>
+        </div>
+
+        <div class="status" id="dataStatus">
+          Loading rankings...
+        </div>
+      </div>
+
+      <div id="view"></div>
+
+    </div>
+  </section>
+
+  <section id="information" class="info-section">
+
+    <div class="info-card">
+
+      <span class="eyebrow">PHANTOM TIERS</span>
+
+      <h2>Competitive Minecraft PvP Rankings</h2>
+
+      <p>
+        Players are ranked by their tested tiers across each gamemode.
+        Overall placement is calculated automatically from tier points.
+      </p>
+
+      <div class="point-grid" id="pointGrid"></div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<div class="player-modal" id="playerModal" aria-hidden="true">
+
+  <div class="modal-backdrop" data-close-modal></div>
+
+  <div class="modal-card">
+
+    <button class="modal-close" data-close-modal>
+      ×
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
