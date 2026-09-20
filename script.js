@@ -33,7 +33,7 @@ const POINTS = {
 };
 
 const aliases = {
-  diamondSmp:["diamondSmp","diamond_smp","diamond smp","Diamond SMP"],
+  diamondSmp:["diamondSmp","diamondsmp","diamond_smp","diamond smp","Diamond SMP"],
   diapot:["diapot","diaPot","dia_pot","DiaPot"],
   netherite:["netherite"],
   crystal:["crystal","vanilla","crystals"],
