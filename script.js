@@ -21,15 +21,15 @@ const TIERS = [
 
 const POINTS = {
   HT1:60,
-  LT1:50,
-  HT2:40,
-  LT2:35,
-  HT3:30,
-  LT3:25,
-  HT4:20,
-  LT4:15,
-  HT5:10,
-  LT5:5
+  LT1:45,
+  HT2:30,
+  LT2:20,
+  HT3:10,
+  LT3:6,
+  HT4:4,
+  LT4:3,
+  HT5:2,
+  LT5:1
 };
 
 const aliases = {
