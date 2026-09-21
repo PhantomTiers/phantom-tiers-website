@@ -110,5 +110,19 @@
             "axe": "Untested",
             "smp": "Untested"
         }
+    },
+    "1404822340814241803": {
+        "minecraft": null,
+        "tiers": {
+            "sword": "LT4",
+            "uhc": "Untested",
+            "diamondsmp": "Untested",
+            "diapot": "Untested",
+            "netherite": "Untested",
+            "mace": "Untested",
+            "crystal": "Untested",
+            "axe": "Untested",
+            "smp": "Untested"
+        }
     }
 }
