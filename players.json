@@ -138,5 +138,19 @@
             "axe": "HT5",
             "smp": "Untested"
         }
+    },
+    "1484643176449966151": {
+        "minecraft": "SukunaV1",
+        "tiers": {
+            "sword": "Untested",
+            "uhc": "Untested",
+            "diamondsmp": "Untested",
+            "diapot": "Untested",
+            "netherite": "Untested",
+            "mace": "Untested",
+            "crystal": "Untested",
+            "axe": "Untested",
+            "smp": "Untested"
+        }
     }
 }
